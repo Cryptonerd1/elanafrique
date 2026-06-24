@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main id="home">
+      <main>
         <HeroSection />
         <AboutSection />
         <ServicesSection />

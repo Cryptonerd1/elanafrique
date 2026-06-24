@@ -1,4 +1,6 @@
 
+import { Icon } from "./Icons";
+
 export function ImpactBanner() {
   return (
     <section
@@ -10,7 +12,9 @@ export function ImpactBanner() {
     >
       <style>{`
         .impact-btn {
-          display: inline-block;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
           padding: 0.85rem 2.4rem;
           background: #1B5E20;
           color: #fff;
@@ -30,6 +34,23 @@ export function ImpactBanner() {
       `}</style>
 
       <div style={{ maxWidth: 700, margin: "0 auto" }}>
+        {/* Decorative icon row */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "1.25rem",
+            marginBottom: "1.5rem",
+            opacity: 0.55,
+          }}
+        >
+          <Icon name="globe" size={28} color="#1A1A2E" />
+          <Icon name="leaf" size={28} color="#1A1A2E" />
+          <Icon name="star" size={28} color="#1A1A2E" />
+          <Icon name="people" size={28} color="#1A1A2E" />
+          <Icon name="chart" size={28} color="#1A1A2E" />
+        </div>
+
         <h2
           style={{
             fontFamily: "'Playfair Display', serif",
@@ -41,11 +62,19 @@ export function ImpactBanner() {
         >
           Discover Africa. Experience Excellence.
         </h2>
-        <p style={{ fontSize: "1.1rem", color: "#1A1A2E", marginBottom: "2rem", opacity: 0.85 }}>
+        <p
+          style={{
+            fontSize: "1.1rem",
+            color: "#1A1A2E",
+            marginBottom: "2rem",
+            opacity: 0.8,
+          }}
+        >
           Connecting the world to Africa through innovation.
         </p>
         <a href="#contact" className="impact-btn">
-          Partner With Us →
+          Partner With Us
+          <Icon name="arrow" size={18} color="#fff" />
         </a>
       </div>
     </section>
